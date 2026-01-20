@@ -1,16 +1,29 @@
 {
-  "name": "acp-node",
+  "name": "agentic-commerce-sdk",
   "version": "0.1.0",
-  "description": "ACP (Agentic Commerce Protocol) TypeScript/JavaScript SDK - Enable AI agents to complete purchases",
+  "description": "TypeScript SDK for the Agentic Commerce Protocol (ACP) - Enable AI agents to complete secure purchases",
   "author": "Nik Jain <nik@founderfirst.one>",
   "license": "MIT",
+  "keywords": [
+    "agentic-commerce",
+    "acp",
+    "ai-agents",
+    "checkout",
+    "payments",
+    "stripe",
+    "openai",
+    "sdk",
+    "typescript",
+    "commerce"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/founderfirst/acp-node.git"
+    "url": "https://github.com/nikjain15/agentic-commerce-sandbox.git",
+    "directory": "demos/acp/acp-node"
   },
-  "homepage": "https://github.com/founderfirst/acp-node#readme",
+  "homepage": "https://github.com/nikjain15/agentic-commerce-sandbox/tree/main/demos/acp/acp-node#readme",
   "bugs": {
-    "url": "https://github.com/founderfirst/acp-node/issues"
+    "url": "https://github.com/nikjain15/agentic-commerce-sandbox/issues"
   },
   "main": "dist/cjs/acp.js",
   "module": "dist/esm/acp.js",
@@ -48,16 +61,5 @@
   },
   "engines": {
     "node": ">=18"
-  },
-  "keywords": [
-    "acp",
-    "agentic-commerce",
-    "agentic-commerce-protocol",
-    "checkout",
-    "payments",
-    "ai-agents",
-    "ecommerce",
-    "stripe",
-    "shopify"
-  ]
+  }
 }
