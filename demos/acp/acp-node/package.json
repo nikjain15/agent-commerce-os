@@ -1,0 +1,63 @@
+{
+  "name": "acp-node",
+  "version": "0.1.0",
+  "description": "ACP (Agentic Commerce Protocol) TypeScript/JavaScript SDK - Enable AI agents to complete purchases",
+  "author": "Nik Jain <nik@founderfirst.one>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/founderfirst/acp-node.git"
+  },
+  "homepage": "https://github.com/founderfirst/acp-node#readme",
+  "bugs": {
+    "url": "https://github.com/founderfirst/acp-node/issues"
+  },
+  "main": "dist/cjs/acp.js",
+  "module": "dist/esm/acp.js",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/acp.js",
+      "require": "./dist/cjs/acp.js",
+      "types": "./types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/ test/",
+    "format": "prettier --write .",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "acp",
+    "agentic-commerce",
+    "agentic-commerce-protocol",
+    "checkout",
+    "payments",
+    "ai-agents",
+    "ecommerce",
+    "stripe",
+    "shopify"
+  ]
+}
