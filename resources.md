@@ -2,13 +2,15 @@
 
 ## Official Documentation
 
-### ACP
+### ACP (Agentic Commerce Protocol)
+Open standard created by OpenAI, Stripe, and Meta; currently maintained by OpenAI and Stripe.
 - [Spec Site](https://agenticcommerce.dev)
-- [GitHub](https://github.com/openai/agentic-commerce-protocol)
+- [GitHub](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol)
+- [Stripe docs](https://docs.stripe.com/agentic-commerce/acp)
 
-### UCP
-- [Docs Site](https://ucp.dev)
-- [GitHub](https://github.com/anthropics/universal-commerce-protocol)
+### UCP (Universal Commerce Protocol)
+Open standard led by Google and Shopify (founding members also include Etsy, Target, and Wayfair), governed by the UCP Tech Council (which Amazon, Meta, Microsoft, Salesforce, and Stripe joined in 2026).
+- [Stripe docs](https://docs.stripe.com/agentic-commerce/protocol)
 
 ## Related Protocols
 

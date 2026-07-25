@@ -1,27 +1,23 @@
-# acp-node
+# agentic-commerce-sdk (design-stage ACP reference client)
 
-[![npm version](https://img.shields.io/npm/v/acp-node.svg)](https://www.npmjs.com/package/acp-node)
-[![Build Status](https://github.com/founderfirst/acp-node/workflows/CI/badge.svg)](https://github.com/founderfirst/acp-node/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-The official TypeScript/JavaScript SDK for the **Agentic Commerce Protocol (ACP)**.
+A design-stage TypeScript/JavaScript reference client for the **Agentic Commerce Protocol (ACP)**. This is an independent exploration, not affiliated with the official ACP maintainers (OpenAI and Stripe), and it is not published to npm.
 
-Enable AI agents to complete purchases with proper authentication, spending limits, and merchant verification.
+It shows how an AI agent could complete purchases with proper authentication, spending limits, and merchant verification. The code examples below use the local package name `agentic-commerce-sdk`.
 
 ## Installation
 
+This package is vendored inside this repository under `demos/acp/acp-node/`; it is not published to a registry. To try it, work from the checked-out repo:
+
 ```bash
-npm install acp-node
-# or
-yarn add acp-node
-# or
-pnpm add acp-node
+cd demos/acp/acp-node && npm install && npm test
 ```
 
 ## Quick Start
 
 ```typescript
-import ACP from 'acp-node';
+import ACP from 'agentic-commerce-sdk';
 
 // Initialize the client
 const acp = new ACP('sk_test_your_api_key');
@@ -71,7 +67,7 @@ console.log('Order created:', completed.order?.id);
 ## Configuration
 
 ```typescript
-import ACP from 'acp-node';
+import ACP from 'agentic-commerce-sdk';
 
 // Simple initialization
 const acp = new ACP('sk_test_...');
@@ -203,7 +199,7 @@ await acp.checkoutSessions.complete('cs_123', {
 Verify and handle webhook events:
 
 ```typescript
-import ACP from 'acp-node';
+import ACP from 'agentic-commerce-sdk';
 import express from 'express';
 
 const app = express();
@@ -246,7 +242,7 @@ app.post(
 ### Testing Webhooks
 
 ```typescript
-import ACP from 'acp-node';
+import ACP from 'agentic-commerce-sdk';
 
 const testPayload = JSON.stringify({
   id: 'evt_test_123',
@@ -272,7 +268,7 @@ const event = ACP.webhooks.constructEvent(
 ## Error Handling
 
 ```typescript
-import ACP from 'acp-node';
+import ACP from 'agentic-commerce-sdk';
 
 try {
   const session = await acp.checkoutSessions.create({ ... });
@@ -337,7 +333,7 @@ import ACP, {
   CheckoutSession,
   CheckoutSessionCreateParams,
   WebhookEvent,
-} from 'acp-node';
+} from 'agentic-commerce-sdk';
 
 const params: CheckoutSessionCreateParams = {
   items: [{ id: 'item_123', quantity: 1 }],

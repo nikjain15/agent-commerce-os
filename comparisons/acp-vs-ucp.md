@@ -6,7 +6,7 @@
 
 | Aspect | ACP | UCP |
 |--------|-----|-----|
-| **Led By** | OpenAI + Stripe | Shopify + Google + Walmart |
+| **Led By** | OpenAI + Stripe (founding: also Meta) | Google + Shopify (founding: also Etsy, Target, Wayfair) |
 | **Focus** | Payment delegation | Full commerce interop |
 | **Transport** | REST/HTTP | REST, MCP, A2A |
 | **Scope** | Checkout & payment | Discovery to fulfillment |
