@@ -4,7 +4,7 @@
 
 ## What is UCP?
 
-Universal Commerce Protocol is an open standard for enabling interoperability between commerce entities - platforms, businesses, payment providers, and AI agents.
+Universal Commerce Protocol is an open standard for enabling interoperability between commerce entities, platforms, businesses, payment providers, and AI agents.
 
 ## Key Concepts
 

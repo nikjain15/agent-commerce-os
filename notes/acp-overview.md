@@ -18,9 +18,9 @@ Agentic Commerce Protocol is an open standard developed by OpenAI and Stripe to 
 - Status lifecycle: `created` → `payment_pending` → `completed`
 
 ### Webhook Events
-- `checkout.completed` - Order successfully placed
-- `checkout.cancelled` - Session cancelled
-- `checkout.expired` - Session timed out
+- `checkout.completed`, Order successfully placed
+- `checkout.cancelled`, Session cancelled
+- `checkout.expired`, Session timed out
 
 ## TypeScript SDK
 

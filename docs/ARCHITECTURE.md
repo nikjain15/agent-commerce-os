@@ -1,4 +1,4 @@
-# Architecture - Agent Commerce OS (proposed / reference)
+# Architecture, Agent Commerce OS (proposed / reference)
 
 **Read this as a reference architecture and a point of view, not a description of a running system.** Where a component actually exists in this repo, it is marked **[in repo]**. Everything else is **[proposed]**.
 
@@ -39,19 +39,19 @@ flowchart TB
     OBS --> A
 ```
 
-**What is real today:** the Client SDK, the ACP adapter surface, request IDs + idempotency in the HTTP client, and webhook signature verification. **What is proposed:** the UCP adapter, the policy/guardrail module, reconciliation, and every backend box (merchant API, PSP) - those are external systems the OS integrates with, not things this repo implements.
+**What is real today:** the Client SDK, the ACP adapter surface, request IDs + idempotency in the HTTP client, and webhook signature verification. **What is proposed:** the UCP adapter, the policy/guardrail module, reconciliation, and every backend box (merchant API, PSP), those are external systems the OS integrates with, not things this repo implements.
 
 ## 2. The reference SDK as built [in repo]
 
 A Stripe-SDK-shaped client. Concrete files:
 
-- `src/acp.ts` - `ACP` client: config parsing (api key / version / timeout / retries / host), resource wiring, static `errors` and `webhooks`.
-- `src/resources/CheckoutSessions.ts` - `create`, `retrieve`, `update`, `complete`, `cancel`.
-- `src/resources/DelegatePayment.ts` - `create` a scoped payment token.
-- `src/Webhooks.ts` - `constructEvent`, `verifySignature`, `generateTestHeaderString`; HMAC-SHA256, timestamp tolerance (300s), timing-safe compare.
-- `src/net/FetchHttpClient.ts` - fetch-based transport, exponential backoff with jitter, 429 `Retry-After` handling, abort/timeout, idempotency + `X-Request-Id` headers.
-- `src/Error.ts` - `ACPError` base + 9 typed subclasses mapped from HTTP status.
-- `src/types.ts` - request/response types for sessions, delegation, webhooks.
+- `src/acp.ts`, `ACP` client: config parsing (api key / version / timeout / retries / host), resource wiring, static `errors` and `webhooks`.
+- `src/resources/CheckoutSessions.ts`, `create`, `retrieve`, `update`, `complete`, `cancel`.
+- `src/resources/DelegatePayment.ts`, `create` a scoped payment token.
+- `src/Webhooks.ts`, `constructEvent`, `verifySignature`, `generateTestHeaderString`; HMAC-SHA256, timestamp tolerance (300s), timing-safe compare.
+- `src/net/FetchHttpClient.ts`, fetch-based transport, exponential backoff with jitter, 429 `Retry-After` handling, abort/timeout, idempotency + `X-Request-Id` headers.
+- `src/Error.ts`, `ACPError` base + 9 typed subclasses mapped from HTTP status.
+- `src/types.ts`, request/response types for sessions, delegation, webhooks.
 
 ```mermaid
 flowchart LR

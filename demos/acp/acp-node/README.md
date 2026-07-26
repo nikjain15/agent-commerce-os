@@ -306,8 +306,8 @@ try {
 | `ACPInvalidRequestError` | 400, 4xx | Invalid request parameters |
 | `ACPRateLimitError` | 429 | Rate limit exceeded |
 | `ACPAPIError` | 5xx | Server error |
-| `ACPConnectionError` | - | Network connectivity issue |
-| `ACPSignatureVerificationError` | - | Invalid webhook signature |
+| `ACPConnectionError` |  | Network connectivity issue |
+| `ACPSignatureVerificationError` |  | Invalid webhook signature |
 
 ## Request Options
 
@@ -353,7 +353,7 @@ Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md)
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License, see [LICENSE](LICENSE) for details.
 
 ## Related Links
 
