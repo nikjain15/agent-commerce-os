@@ -26,7 +26,7 @@ As agents (ChatGPT, Perplexity, custom assistants) start *completing* purchases 
 
 ## What's in the repo today
 
-- **`demos/acp/acp-node/`:** a **design-stage reference SDK** for ACP (~2,100 lines TypeScript, **35 passing unit tests**). Stripe-patterned client:
+- **`demos/acp/acp-node/`:** a **design-stage reference SDK** for ACP (~1,250 lines TypeScript in `src/`, ~2,200 total including tests and examples, **35 passing unit tests**). Stripe-patterned client:
   - Checkout Sessions (create / retrieve / update / complete / cancel)
   - Delegate Payment (scoped payment tokens, max amount, merchant, expiry)
   - Webhook signature verification (HMAC-SHA256, timing-safe, timestamp tolerance)

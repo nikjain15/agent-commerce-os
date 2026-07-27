@@ -2,7 +2,7 @@
 
 **Read this as a reference architecture and a point of view, not a description of a running system.** Where a component actually exists in this repo, it is marked **[in repo]**. Everything else is **[proposed]**.
 
-The repo contains a **design-stage ACP client SDK** (`demos/acp/acp-node`, ~2,100 lines TypeScript, 35 passing unit tests) plus protocol research (`notes/`, `comparisons/`, `articles/`). The SDK is a Stripe-patterned client: it models the *client-side integration surface* of the Agentic Commerce Protocol. It does not include a backend, and it targets a spec-facing host (`api.agentic-commerce.com`) rather than a live service.
+The repo contains a **design-stage ACP client SDK** (`demos/acp/acp-node`, ~1,250 lines TypeScript in `src/`, ~2,200 total including tests and examples, 35 passing unit tests) plus protocol research (`notes/`, `comparisons/`, `articles/`). The SDK is a Stripe-patterned client: it models the *client-side integration surface* of the Agentic Commerce Protocol. It does not include a backend, and it targets a spec-facing host (`api.agentic-commerce.com`) rather than a live service.
 
 ---
 
