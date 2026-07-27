@@ -1,9 +1,10 @@
 # Agent Commerce OS
 
-**A point of view, and a reference architecture, for how AI agents will buy on your behalf.**
+**A typed, tested reference client for the Agentic Commerce Protocol, plus a point of view on why agent payments must be deterministic.**
 
-[![ACP reference SDK](https://img.shields.io/badge/ACP_reference_SDK-v0.1.0-blue)](demos/acp/acp-node)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![tests](https://img.shields.io/badge/tests-35_passing-brightgreen)](demos/acp/acp-node/test)
+[![ACP reference SDK](https://img.shields.io/badge/ACP_reference_SDK-v0.1.0-blue)](demos/acp/acp-node)
 [![status](https://img.shields.io/badge/status-research_%2B_design--stage-orange)](docs/)
 
 This repo is a **research / thesis artifact** on agentic commerce, the emerging standards (ACP, UCP), the delegated-payment trust model, and what a real "Agent Commerce OS" would have to do, backed by a **design-stage reference SDK** that implements the client side of the Agentic Commerce Protocol.
@@ -37,8 +38,10 @@ As agents (ChatGPT, Perplexity, custom assistants) start *completing* purchases 
 - **`articles/`:** "AI Agents Are Learning to Shop" (Stage 1: Discovery), a merchant-facing piece.
 - **`resources.md`:** ACP / UCP / AP2 / A2A / MCP references.
 
+The SDK is vendored in this repo (not published to npm). To try it: `cd demos/acp/acp-node && npm install && npm test`. Full details in the [SDK README](demos/acp/acp-node/README.md) and the [/docs set](docs/).
+
 ```typescript
-import ACP from 'acp-node';
+import ACP from 'agentic-commerce-sdk';
 
 const acp = new ACP('sk_test_...');
 
