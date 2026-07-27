@@ -1,6 +1,6 @@
 # AI Agents Are Learning to Shop. Here's What That Means for Your Business.
 
-> **Stage 1: Discovery** | Part of the [Agentic Commerce Series](https://github.com/nikjain15/agentic-commerce-sandbox)
+> **Stage 1: Discovery** | Part of the [Agentic Commerce Series](https://github.com/nikjain15/agent-commerce-os)
 
 [![FounderFirst](https://img.shields.io/badge/FounderFirst-Newsletter-blue)](https://founderfirstone.substack.com)
 [![Website](https://img.shields.io/badge/Website-founderfirst.one-green)](https://founderfirst.one)
@@ -67,7 +67,7 @@ Sarah from our story? She integrated UCP and saw agents recommending her dresses
 ## Get Started
 
 - **Explore the protocols:** [agenticcommerce.dev](https://agenticcommerce.dev) | [ucp.dev](https://ucp.dev)
-- **Try the sandbox:** [agentic-commerce-sandbox](https://github.com/nikjain15/agentic-commerce-sandbox)
+- **Try the sandbox:** [agent-commerce-os](https://github.com/nikjain15/agent-commerce-os)
 - **Subscribe for updates:** [FounderFirst Newsletter](https://founderfirstone.substack.com)
 
 ---

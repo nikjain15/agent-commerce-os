@@ -18,12 +18,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nikjain15/agentic-commerce-sandbox.git",
+    "url": "https://github.com/nikjain15/agent-commerce-os.git",
     "directory": "demos/acp/acp-node"
   },
-  "homepage": "https://github.com/nikjain15/agentic-commerce-sandbox/tree/main/demos/acp/acp-node#readme",
+  "homepage": "https://github.com/nikjain15/agent-commerce-os/tree/main/demos/acp/acp-node#readme",
   "bugs": {
-    "url": "https://github.com/nikjain15/agentic-commerce-sandbox/issues"
+    "url": "https://github.com/nikjain15/agent-commerce-os/issues"
   },
   "main": "dist/cjs/acp.js",
   "module": "dist/esm/acp.js",

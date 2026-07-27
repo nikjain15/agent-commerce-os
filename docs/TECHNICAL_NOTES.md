@@ -3,7 +3,7 @@
 **What this repo is:** a research / point-of-view artifact on where agentic commerce is going, plus a **design-stage reference SDK** for the Agentic Commerce Protocol (ACP). It is not a shipping product and not an AI/LLM system. It is scored below on that basis, most engineering dimensions are honestly at "design-stage," and the AI-specific rubric dimensions largely **do not apply** because there is no model in the loop here. That is stated, not hidden.
 
 Verified by running the repo:
-- `demos/acp/acp-node`: ~2,100 lines TypeScript across `src/`. `npm test` -> **35 passed (35)** via vitest (Error 11, Webhooks 14, ACP client 10).
+- `demos/acp/acp-node`: ~1,250 lines TypeScript in `src/` (~2,200 total including tests and examples). `npm test` -> **35 passed (35)** via vitest (Error 11, Webhooks 14, ACP client 10).
 - 9 typed error subclasses of `ACPError`. HMAC-SHA256 webhook verification with timing-safe compare and 300s tolerance. Fetch client with exponential backoff + jitter, 429 `Retry-After`, idempotency keys, request IDs. Dual CJS/ESM build config.
 
 ---
@@ -19,7 +19,7 @@ Verified by running the repo:
 | 5 | Orchestration & routing | N/A | Not an inference system. | A real OS would route ACP vs UCP per merchant, the adapter layer is proposed in ARCHITECTURE.md. |
 | 6 | RAG & context | N/A | No retrieval. | Merchant catalog/price grounding is the analogous concern; out of scope here. |
 | 7 | Evals & grounding | 2 | 35 unit tests on security-sensitive plumbing (webhook signatures, error mapping, client construction). | No conformance/eval harness against the ACP spec, no LLM-judge or A/B (nothing to judge). Roadmap in EVALS.md. |
-| 8 | Code quality | 4 | Stripe-patterned structure, clear separation (`net/`, `resources/`, `Error.ts`, `Webhooks.ts`), JSDoc throughout, dual CJS/ESM, prettier/eslint config, CI workflow present. Tests pass. | Some README/badge inconsistencies (see below); no runtime validation; examples reference an API host that is not live. |
+| 8 | Code quality | 4 | Stripe-patterned structure, clear separation (`net/`, `resources/`, `Error.ts`, `Webhooks.ts`), JSDoc throughout, dual CJS/ESM, prettier/eslint config, CI workflow present. Tests pass. | No runtime validation; examples reference an API host that is not live. |
 | 9 | Scalability & cost | 3 | Client-side resilience is real: exponential backoff + jitter, capped retries, 429 handling, idempotency keys, per-request timeouts (`net/FetchHttpClient.ts`). | Backend scalability is N/A (no backend). Cost model undefined. |
 | 10 | Guardrails & safety | 3 | Strong *conceptual* model: scoped tokens (max amount, merchant, expiry, reason), no raw credentials to the agent, timing-safe signature verification. Verification is implemented and tested. | Scope *enforcement*, revocation, per-agent limits, human-in-the-loop threshold, and kill switch are proposed, not built. Enforcement lives on the (absent) PSP side. |
 | 11 | Product layer | 4 | PRD.md: personas (merchant, agent dev, PSP, buyer), JTBD, what a real Agent Commerce OS needs, metrics, tradeoffs, Now/Next/Later. Merchant-facing article in `articles/`. | Metrics are aspirational (no live usage). |
@@ -33,7 +33,7 @@ These are pre-existing overclaims worth correcting so the repo reads as honest:
 
 - **"production-ready SDK"** (root `README.md`, `notes/acp-overview.md`), it is a design-stage reference client with unit-tested plumbing but no live backend. Reworded in the revamped README to "design-stage reference SDK."
 - **GitHub repo description** (currently "TypeScript SDK for agentic commerce protocols (ACP/UCP)... 35 passing tests"), the *35 tests are real and pass*, but the description (a) implies a UCP SDK when UCP is only a stub, and (b) frames a research artifact as a shipping SDK product. See the recommended corrected string in the revamped README / PR.
-- **Package vs badge naming:** `package.json` name is `agentic-commerce-sdk`; the SDK README npm/CI badges point at `acp-node` / `github.com/founderfirst/acp-node`. Left untouched (out of additive scope) but flagged.
+- **Package and repo naming:** the local package name is `agentic-commerce-sdk`, used consistently in the SDK README and examples, and the `package.json` `repository`, `homepage`, and `bugs` URLs point at the canonical repo `github.com/nikjain15/agent-commerce-os`. The SDK README carries only a license badge (no npm/CI badges). Names and links are consistent.
 - **`resources.md` UCP links:** UCP is attributed to "Shopify + Google + Walmart" and links to `github.com/anthropics/universal-commerce-protocol`. **[VERIFY WITH NIK]:** confirm the exact UCP steward and canonical URL before publicizing; do not assert if unverified.
 - **Article statistics:** the Stage 1 article cites third-party market stats with sources and uses two clearly fictional vignettes (Sarah, Alex). Fine as an opinion piece; not repo capability claims.
 
